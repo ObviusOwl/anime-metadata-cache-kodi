@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scraper framework="1.1" date="2019-05-14" name="anidb cached" content="tvshows" thumb="" >
+    <NfoUrl dest="3">
+        <RegExp input="$$1" output="&lt;details&gt;&lt;url&gt;$INFO[cache_url]?aid=\1&lt;/url&gt;&lt;/details&gt;" dest="3">
+            <expression clear="yes" noclean="1" trim="1">aid=([0-9]*)</expression>
+        </RegExp>
+    </NfoUrl>
+
+    <CreateSearchUrl dest="3">
+        <RegExp input="$$1" output="&lt;url&gt;$INFO[cache_url]?q=\1&lt;/url&gt;" dest="3">
+            <expression clear="yes" noclean="1" trim="1">(.+)</expression>
+        </RegExp>
+    </CreateSearchUrl>
+
+    <GetSearchResults dest="3">
+        <RegExp input="$$1" output="\1" dest="3">
+            <expression clear="yes" noclean="1" trim="1">(.+)</expression>
+        </RegExp>
+    </GetSearchResults>
+
+    <GetDetails dest="3">
+        <RegExp input="$$1" output="\1" dest="3">
+            <expression clear="yes" noclean="1" trim="1">(.+)</expression>
+        </RegExp>
+    </GetDetails>
+    
+    <GetEpisodeList dest="4">
+        <RegExp input="$$1" output="\1" dest="4">
+            <expression clear="yes" noclean="1" trim="1">(.+)</expression>
+        </RegExp>
+    </GetEpisodeList>
+
+    <GetEpisodeDetails dest="5">
+        <RegExp input="$$1" output="\1" dest="5">
+            <expression clear="yes" noclean="1" trim="1">(.+)</expression>
+        </RegExp>
+    </GetEpisodeDetails>
+
+</scraper>

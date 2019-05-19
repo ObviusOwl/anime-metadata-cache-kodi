@@ -1,0 +1,15 @@
+# Kodi Media Center language file
+# Addon Name: AniDB.net Cache
+# Addon id: metadata.anidb.cache
+msgid ""
+msgstr ""
+
+# Settings categories
+msgctxt "#30001"
+msgid "General"
+msgstr "General"
+
+# Settings
+msgctxt "#30002"
+msgid "Cache Server URL"
+msgstr "Cache Server URL"
